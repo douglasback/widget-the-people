@@ -14,6 +14,12 @@
     <p><a href="{{ url }}">Sign the petition</a></p>\
     ');
     
+    wtp.thermometer = _.template('<div class="thermometer-wrap">\
+    <div class="thermometer" style="width: 85%; height:20px; background: #ccc;">\
+    <div class="progress" style="width: {{ progress }}%; height: 20px; background: red;">\
+    </div>\
+    </div>\
+    </div>');
     wtp.baseUrl = "https://petitions.whitehouse.gov/api/v1/";
     
     /*
@@ -31,7 +37,7 @@
         console.log("an error, that's all i got");
     };
     
-    window.wtpcallback = function(data){
+    wtp.callback = function(data){
         var petition;
         if (data.results.length > 0){
             petition = data.results[0];
@@ -49,11 +55,17 @@
                                     url: petition.url
                                     })
                                     );
-        
+        var mercury = wtp.calculatePercentage(petition["signature count"],petition["signature threshold"]);
+        $('#wrapper').append(wtp.thermometer({progress: mercury}))
         
     };
-    
-    $.getScript(wtp.buildUrl('petitions/' + wtp.idReg.exec(document.location.search)[1], "wtpcallback"));
+    wtp.calculatePercentage = function(count, threshold){
+        var c = parseInt(count, 10),
+            t = parseInt(threshold, 10);
+        console.log(c / t * 100 + '%');
+        return c / t * 100;
+    }
+    $.getScript(wtp.buildUrl('petitions/' + wtp.idReg.exec(document.location.search)[1], "wtp.callback"));
     
     
 }(window, document));
