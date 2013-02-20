@@ -5,6 +5,8 @@
     
     window.wtp = window.wtp || {};
     
+    wtp.key = 'xeUpEtux3Egbt5V';
+    wtp.idReg = new RegExp(/id=([A-Za-z0-9]*)/);
     wtp.tpl = _.template('<h1>{{ title }}</h1>\
     <p>Goal: {{ signatures.threshold }}</p>\
     <p>Signatures: {{ signatures.count }}</p>\
@@ -12,10 +14,22 @@
     <p><a href="{{ url }}">Sign the petition</a></p>\
     ');
     
+    wtp.baseUrl = "https://petitions.whitehouse.gov/api/v1/";
+    
+    /*
+    *
+    */
+    wtp.buildUrl = function(method, callback){
+        console.log("building url");
+        console.log(method);
+        console.log(callback);
+        console.log(wtp.baseUrl + method + '.jsonp?key=' + wtp.key + 'callback=' + callback);
+        return wtp.baseUrl + method + '.jsonp?key=' + wtp.key + '&callback=' + callback;
+    };
+    
     wtp.dispatchError = function(){
         console.log("an error, that's all i got");
     };
-  $.getScript("https://petitions.whitehouse.gov/api/v1/petitions/50cb6d2ba9a0b1c52e000017.jsonp?&key=xeUpEtux3Egbt5V&callback=wtpcallback");
     
     window.wtpcallback = function(data){
         var petition;
@@ -37,5 +51,9 @@
                                     );
         
         
-    }
+    };
+    
+    $.getScript(wtp.buildUrl('petitions/' + wtp.idReg.exec(document.location.search)[1], "wtpcallback"));
+    
+    
 }(window, document));
