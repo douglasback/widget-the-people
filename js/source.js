@@ -5,8 +5,12 @@
     
     window.wtp = window.wtp || {};
     
+    wtp.baseUrl = "https://petitions.whitehouse.gov/api/v1/";
+
     wtp.key = 'xeUpEtux3Egbt5V';
+    
     wtp.idReg = new RegExp(/id=([A-Za-z0-9]*)/);
+    
     wtp.tpl = _.template('<h1>{{ title }}</h1>\
     <p>Goal: {{ signatures.threshold }}</p>\
     <p>Signatures: {{ signatures.count }}</p>\
@@ -20,7 +24,7 @@
     </div>\
     </div>\
     </div>');
-    wtp.baseUrl = "https://petitions.whitehouse.gov/api/v1/";
+
     
     /*
     *
@@ -59,12 +63,14 @@
         $('#wrapper').append(wtp.thermometer({progress: mercury}))
         
     };
+    
     wtp.calculatePercentage = function(count, threshold){
         var c = parseInt(count, 10),
             t = parseInt(threshold, 10);
         console.log(c / t * 100 + '%');
         return c / t * 100;
     }
+    
     $.getScript(wtp.buildUrl('petitions/' + wtp.idReg.exec(document.location.search)[1], "wtp.callback"));
     
     
