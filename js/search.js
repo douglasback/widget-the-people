@@ -12,7 +12,7 @@
                 return p.title === needle;
             });
             console.log("petition id === " + result.id);
-            $('#wrapper').append('<a href="http://wtp/?id=' + result.id +'">Get your widget');
+            $('#generated-widget').val('<iframe src="http://wtp/?id=' + result.id +'" style="width: 100%; height: 300px; border: 0;"></iframe>');
         });
     };
     var loadPetitions = function(){
@@ -28,7 +28,6 @@
                 pet.id = p.id;
                 return pet;
             });
-            console.log(petitions);
             petitionTitles = _.pluck(petitions, "title");
             $('#title-search').autocomplete({
                 source: petitionTitles,

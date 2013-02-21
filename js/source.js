@@ -19,8 +19,8 @@
     ');
     
     wtp.thermometer = _.template('<div class="thermometer-wrap">\
-    <div class="thermometer" style="width: 85%; height:20px; background: #ccc;">\
-    <div class="progress" style="width: {{ progress }}%; height: 20px; background: red;">\
+    <div class="thermometer">\
+    <div class="progress" style="width: {{ progress }}%;">\
     </div>\
     </div>\
     </div>');
