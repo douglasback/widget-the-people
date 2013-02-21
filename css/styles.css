@@ -397,4 +397,6 @@ table {
 
 body {
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    width: 75%;
+    margin: 0 auto;
 }
