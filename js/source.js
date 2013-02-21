@@ -66,9 +66,12 @@
     
     wtp.calculatePercentage = function(count, threshold){
         var c = parseInt(count, 10),
-            t = parseInt(threshold, 10);
+            t = parseInt(threshold, 10),
+            fill = c / t * 100;
+            
         console.log(c / t * 100 + '%');
-        return c / t * 100;
+        
+        return fill < 100 ? fill : 100;
     }
     
     $.getScript(wtp.buildUrl('petitions/' + wtp.idReg.exec(document.location.search)[1], "wtp.callback"));
