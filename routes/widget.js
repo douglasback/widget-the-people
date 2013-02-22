@@ -9,7 +9,7 @@ module.exports = {
         var tmplVars = {},
             url = 'https://petitions.whitehouse.gov/api/v1/petitions/' + req.params.id + '.json?key=xeUpEtux3Egbt5V',
             viewRes = res;
-        tmplVars.pageType = 'widget';
+        // tmplVars.pageType = 'widget';
         tmplVars.petitionId = req.params.id;
         console.log("connecting to api… " + url);
         https.get(url, function(res) {
