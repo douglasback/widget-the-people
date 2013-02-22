@@ -4,7 +4,9 @@
   </header>
 
   {{#if active}}
-  <p id="signature-needed"><span id="signature-needed-number">{{ signatures.needed }}</span> signatures needed by <span id="deadline">{{ deadline }}</span></p>
+  <div id="signature-info">
+    <p id="signature-needed"><span id="signature-needed-number">{{ signatures.needed }}</span> signatures needed by <span id="deadline">{{ deadline }}</span></p>
+  </div>
   {{/if}}
 
   {{^if active}}
