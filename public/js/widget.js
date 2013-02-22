@@ -8,9 +8,7 @@
     wtp.baseUrl = "https://petitions.whitehouse.gov/api/v1/";
 
     wtp.key = 'xeUpEtux3Egbt5V';
-    
-    wtp.idReg = new RegExp(/id=([A-Za-z0-9]*)/);
-    
+
     wtp.tpl = _.template('<h1>{{ title }}</h1>\
     <p>Goal: {{ signatures.threshold }}</p>\
     <p>Signatures: {{ signatures.count }}</p>\

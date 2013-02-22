@@ -504,9 +504,16 @@ textarea {
   width: 85%;
   height: 20px;
   background: #cccccc;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  background-clip: content-box;
+  overflow: hidden;
 }
 
-/* line 7, scss/06_widget.scss */
+/* line 10, scss/06_widget.scss */
 .progress {
   height: 20px;
   background: red;

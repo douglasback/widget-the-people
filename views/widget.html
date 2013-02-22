@@ -1,3 +1,10 @@
-<script>
-var petitionId = "{{ petitionId }}";
-</script>
+<h1>{{ title }}</h1>
+<p>Goal: {{ signatures.threshold }}</p>
+<p>Signatures: {{ signatures.count }}</p>
+<p>Signatures needed: {{ signatures.needed }}</p>
+<p><a href="{{ url }}" target="_blank">Sign the petition</a></p>
+<div class="thermometer-wrap">
+    <div class="thermometer">
+        <div class="progress" style="width: {{ progress }}%;"></div>
+    </div>
+</div>

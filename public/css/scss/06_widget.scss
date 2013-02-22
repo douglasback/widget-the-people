@@ -3,6 +3,9 @@
     width: 85%;
     height: 20px;
     background: $grey;
+    @include border-radius(10px);
+    background-clip: content-box;
+    overflow: hidden;
 }
 .progress {
     height: 20px;

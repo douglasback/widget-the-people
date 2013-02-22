@@ -17,7 +17,7 @@
             iframe = '<iframe src="http://petition-promoter.herokuapp.com/widget/' + result.id +'" style="width: 100%; height: 300px; border: 0;"></iframe>';
             $('#generated-widget').val(iframe);
             // test preview
-            $('#step-3-inner').html(iframe);
+            $('#preview-inner').html(iframe);
         });
     };
     var loadPetitions = function(){
