@@ -5,13 +5,16 @@ var https = require('https');
 module.exports = {
     
     index: function(req,res){
+        console.log("generating widget for " + req.params.id);
         var tmplVars = {},
             url = 'https://petitions.whitehouse.gov/api/v1/petitions/' + req.params.id + '.json?key=xeUpEtux3Egbt5V',
             viewRes = res;
         tmplVars.pageType = 'widget';
         tmplVars.petitionId = req.params.id;
+        console.log("connecting to api… " + url);
         https.get(url, function(res) {
-            console.log("getting " + url);
+            
+            console.log("received data from API ");
               var body = '';
 
               res.on('data', function(chunk) {
