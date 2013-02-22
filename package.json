@@ -1,6 +1,6 @@
 {
-    "name": "petitionpromoter",
-    "description": "hello world test app",
+    "name": "petition-promoter",
+    "description": "an app to promote petitions on petitions.whitehouse.gov",
     "version": "0.0.1",
     "private": true,
     "dependencies": {
@@ -12,5 +12,4 @@
           "node": "0.6.x"
           , "npm" : "1.1.9"
     }
-    
 }
