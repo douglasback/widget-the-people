@@ -1,10 +1,24 @@
+
 <h1>{{ title }}</h1>
-<p>Goal: {{ signatures.threshold }}</p>
-<p>Signatures: {{ signatures.count }}</p>
-<p>Signatures needed: {{ signatures.needed }}</p>
-<p><a href="{{ url }}" target="_blank">Sign the petition</a></p>
+{{#if active}}
+<p id="signature-needed">Signatures needed: <span id="signature-needed-number">{{ signatures.needed }}</span></p>
+
+<p id="deadline">Deadline: {{ deadline }}</p>
+<p id="petition-url"><a href="{{ url }}" target="_blank">Sign the petition</a></p>
+{{/if}}
+
+{{^if active}}
+<p id="deadline">This petition's deadline has passed.</p>
+{{/if}}
+  
+
 <div class="thermometer-wrap">
+  <p id="signature-count" style="left: {{ signatures.percentage }}%;"><span id="signature-count-number">{{ signatures.count }}</span> signatures</p>
+  <p id="signature-threshold">Goal: <span id="signature-threshold-number">{{ signatures.threshold }}</span></p>
+  
+
+  
     <div class="thermometer">
-        <div class="progress" style="width: {{ progress }}%;"></div>
+        <div class="progress" style="width: {{ signatures.percentage }}%;"></div>
     </div>
 </div>

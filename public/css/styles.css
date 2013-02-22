@@ -499,9 +499,29 @@ textarea {
   font-weight: normal;
 }
 
-/* line 2, scss/06_widget.scss */
+/* line 1, scss/06_widget.scss */
+.thermometer-wrap {
+  padding-top: 2.6em;
+  position: relative;
+}
+
+/* line 5, scss/06_widget.scss */
+#signature-count {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+/* line 10, scss/06_widget.scss */
+#signature-threshold {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 16, scss/06_widget.scss */
 .thermometer {
-  width: 85%;
+  width: 100%;
   height: 20px;
   background: #cccccc;
   -webkit-border-radius: 10px;
@@ -513,7 +533,7 @@ textarea {
   overflow: hidden;
 }
 
-/* line 10, scss/06_widget.scss */
+/* line 24, scss/06_widget.scss */
 .progress {
   height: 20px;
   background: red;

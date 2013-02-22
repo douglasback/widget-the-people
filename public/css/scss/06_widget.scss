@@ -1,6 +1,20 @@
+.thermometer-wrap {
+    padding-top: 2.6em;
+    position: relative;
+}
+#signature-count {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+#signature-threshold {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 
 .thermometer {
-    width: 85%;
+    width: 100%;
     height: 20px;
     background: $grey;
     @include border-radius(10px);
@@ -11,3 +25,4 @@
     height: 20px;
     background: $red;
 }
+
