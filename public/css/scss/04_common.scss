@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
 }
+
+html {
+    overflow: hidden;
+}
 body {
     background: url(/img/ecailles.png) left top repeat;
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -25,13 +29,27 @@ body {
 
 
 h1 {
-    font-size: 1.8em;
+    font-size: 1.4em;
+    @include respond-min(480px){
+        font-size: 1.6em;
+    }
+    @include respond-min(640px){
+        font-size: 2.0em;
+    }
 }
 h2 {
-    font-size: 1.6em;
-    
+    font-size: 1.4em;
+    @include respond-min(480px){
+        font-size: 1.6em;
+    }
+    @include respond-min(640px){
+        font-size: 2.0em;
+    }
 }
 p {
+    @include respond-max(480px){
+        font-size: 1.2em;
+    }
     font-size: 1em;
 }
 a {

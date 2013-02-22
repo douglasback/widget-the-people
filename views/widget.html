@@ -1,30 +1,30 @@
+<div id="widget">
+  <header class="title">
+  <h1>{{ title }}</h1>
+  </header>
 
-<h1>{{ title }}</h1>
+  {{#if active}}
+  <p id="signature-needed"><span id="signature-needed-number">{{ signatures.needed }}</span> signatures needed by <span id="deadline">{{ deadline }}</span></p>
+  {{/if}}
 
-{{#if active}}
-<p id="signature-needed">Signatures needed: <span id="signature-needed-number">{{ signatures.needed }}</span></p>
-<p id="deadline">Deadline: {{ deadline }}</p>
-
-
-{{/if}}
-
-{{^if active}}
-<p id="deadline">This petition's deadline has passed.</p>
-{{/if}}
+  {{^if active}}
+  <p id="deadline">This petition's deadline has passed.</p>
+  {{/if}}
 
 
-<div class="thermometer-wrap">
-  <p id="signature-count" style="{{ mercuryLabel }};"><span id="signature-count-number">{{ signatures.count }}</span> signatures</p>
-    <div class="thermometer">
-        <div class="progress" style="width: {{ mercury }}%;"></div>
-    </div>
-    <p id="signature-threshold">Goal: <span id="signature-threshold-number">{{ signatures.threshold }}</span></p>
-</div>
+  <div class="thermometer-wrap">
+    <p id="signature-count" style="{{ mercuryLabel }};"><span id="signature-count-number">{{ signatures.count }}</span> signatures</p>
+      <div class="thermometer">
+          <div class="progress" style="width: {{ mercury }}%;"></div>
+      </div>
+      <p id="signature-threshold">Goal: <span id="signature-threshold-number">{{ signatures.threshold }}</span></p>
+  </div>
 
-{{#if active}}
-<p class="button" id="petition-link"><a href="{{ url }}" target="_blank">Sign the petition</a></p>
-{{/if}}
+  {{#if active}}
+  <p class="button" id="petition-link"><a href="{{ url }}" target="_blank">Sign the petition</a></p>
+  {{/if}}
 
-{{#if responseUrl}}
-<p class="button" id="petition-response"><a href="{{ responseUrl }}" target="_blank">Read the official White House response.</a></p>
-{{/if}}
+  {{#if responseUrl}}
+  <p class="button" id="petition-response"><a href="{{ responseUrl }}" target="_blank">Read the official White House response.</a></p>
+  {{/if}}
+</div> <!-- /#widget -->

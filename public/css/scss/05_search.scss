@@ -38,7 +38,7 @@ textarea {
     border: 1px solid shade($autocompleteHighlight, 20);
     li {
         line-height: 1.4;
-        padding: .2em 0;
+        padding: .2em .3em;
         &.active {
             background: $autocompleteHighlight;
         }

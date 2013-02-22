@@ -409,7 +409,12 @@ table {
   box-sizing: border-box;
 }
 
-/* line 4, scss/04_common.scss */
+/* line 5, scss/04_common.scss */
+html {
+  overflow: hidden;
+}
+
+/* line 8, scss/04_common.scss */
 body {
   background: url(/img/ecailles.png) left top repeat;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -417,7 +422,7 @@ body {
   padding: 1px;
 }
 
-/* line 12, scss/04_common.scss */
+/* line 16, scss/04_common.scss */
 #wrapper {
   font-size: 1.2em;
   margin: 1em auto;
@@ -425,34 +430,64 @@ body {
   width: 95%;
 }
 @media screen and (min-width: 480px) {
-  /* line 12, scss/04_common.scss */
+  /* line 16, scss/04_common.scss */
   #wrapper {
     font-size: 1.4em;
   }
 }
 @media screen and (min-width: 640px) {
-  /* line 12, scss/04_common.scss */
+  /* line 16, scss/04_common.scss */
   #wrapper {
     font-size: 1.6em;
   }
 }
 
-/* line 27, scss/04_common.scss */
+/* line 31, scss/04_common.scss */
 h1 {
-  font-size: 1.8em;
+  font-size: 1.4em;
+}
+@media screen and (min-width: 480px) {
+  /* line 31, scss/04_common.scss */
+  h1 {
+    font-size: 1.6em;
+  }
+}
+@media screen and (min-width: 640px) {
+  /* line 31, scss/04_common.scss */
+  h1 {
+    font-size: 2.0em;
+  }
 }
 
-/* line 30, scss/04_common.scss */
+/* line 40, scss/04_common.scss */
 h2 {
-  font-size: 1.6em;
+  font-size: 1.4em;
+}
+@media screen and (min-width: 480px) {
+  /* line 40, scss/04_common.scss */
+  h2 {
+    font-size: 1.6em;
+  }
+}
+@media screen and (min-width: 640px) {
+  /* line 40, scss/04_common.scss */
+  h2 {
+    font-size: 2.0em;
+  }
 }
 
-/* line 34, scss/04_common.scss */
+/* line 49, scss/04_common.scss */
 p {
   font-size: 1em;
 }
+@media screen and (max-width: 480px) {
+  /* line 49, scss/04_common.scss */
+  p {
+    font-size: 1.2em;
+  }
+}
 
-/* line 37, scss/04_common.scss */
+/* line 55, scss/04_common.scss */
 a {
   color: #62b343;
   text-decoration: none;
@@ -518,7 +553,7 @@ textarea {
 /* line 39, scss/05_search.scss */
 .typeahead li {
   line-height: 1.4;
-  padding: 0.2em 0;
+  padding: 0.2em 0.3em;
 }
 /* line 42, scss/05_search.scss */
 .typeahead li.active {
@@ -530,25 +565,49 @@ textarea {
 }
 
 /* line 5, scss/06_widget.scss */
+#widget header {
+  text-align: center;
+  border-bottom: 1px solid #cccccc;
+}
+
+/* line 10, scss/06_widget.scss */
 .thermometer-wrap {
   padding: 2.6em 0;
   position: relative;
 }
 
-/* line 10, scss/06_widget.scss */
+/* line 15, scss/06_widget.scss */
 #signature-count {
   position: absolute;
   top: 0;
 }
 
-/* line 18, scss/06_widget.scss */
+/* line 19, scss/06_widget.scss */
+#signature-needed {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* line 23, scss/06_widget.scss */
+#signature-needed-number {
+  font-size: 125%;
+  font-weight: bold;
+}
+
+/* line 28, scss/06_widget.scss */
+#deadline {
+  font-style: italic;
+  text-transform: none;
+}
+
+/* line 35, scss/06_widget.scss */
 #signature-threshold {
   position: absolute;
   right: 0;
   bottom: 0;
 }
 
-/* line 24, scss/06_widget.scss */
+/* line 41, scss/06_widget.scss */
 .thermometer {
   width: 100%;
   height: 20px;
@@ -562,17 +621,17 @@ textarea {
   overflow: hidden;
 }
 
-/* line 32, scss/06_widget.scss */
+/* line 49, scss/06_widget.scss */
 .progress {
   height: 20px;
   background: red;
 }
 
-/* line 37, scss/06_widget.scss */
+/* line 54, scss/06_widget.scss */
 .button {
   text-align: center;
 }
-/* line 39, scss/06_widget.scss */
+/* line 56, scss/06_widget.scss */
 .button a {
   display: inline-block;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f6f8f9), color-stop(50%, #e5ebee), color-stop(51%, #d7dee3), color-stop(100%, #f5f7f9));
@@ -582,4 +641,9 @@ textarea {
   background-image: linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
   padding: 0.3em 1em;
   border: 1px solid #c4c6c7;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
 }
