@@ -4,16 +4,36 @@
 body {
     background: url(/img/ecailles.png) left top repeat;
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
     padding: 1px;
+    
 }
 
 #wrapper {
+    font-size: 1.2em;
+    @include respond-min(480px){
+        font-size: 1.4em;
+    }
+    @include respond-min(640px){
+        font-size: 1.6em;
+    }
     margin: 1em auto;
     position: relative;
     width: 95%;
   
 }
 
+
+h1 {
+    font-size: 1.8em;
+}
+h2 {
+    font-size: 1.6em;
+    
+}
+p {
+    font-size: 1em;
+}
 a {
     text-decoration: none;
     font-weight: bold;

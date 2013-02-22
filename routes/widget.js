@@ -49,7 +49,7 @@ module.exports = {
                 tmplVars.signatures.needed = apiResponse["signatures needed"];
                 tmplVars.url = apiResponse.url;
                 
-                tmplVars.signatures.percentage = function(){
+                tmplVars.mercury = function(){
                     var c = parseInt(count, 10),
                         t = parseInt(threshold, 10),
                         fill = c / t * 100;
@@ -59,7 +59,9 @@ module.exports = {
                     return fill < 100 ? fill : 100;
                 };
                 
-                if (tmplVars.progress === 100) {
+                
+                
+                if (tmplVars.signatures.percentage === 100) {
                     tmplVars.success = true;
                 } else {
                     tmplVars.success = false;
@@ -78,10 +80,11 @@ module.exports = {
 //         count : integer,
 //         threshold : integer,
 //         needed : integer
-//         percentage : integer
+//         
 //     },
 //     url : string,
 //     active : boolean,
+//     mercury : integer,
 //     deadline : string,
 //     successful : boolean,
 //     response : boolean,

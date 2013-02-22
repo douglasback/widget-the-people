@@ -1,16 +1,20 @@
 .thermometer-wrap {
-    padding-top: 2.6em;
+    padding: 2.6em 0;
     position: relative;
+    
 }
 #signature-count {
     left: 0;
     position: absolute;
     top: 0;
 }
+#signature-count-number {
+    
+}
 #signature-threshold {
     position: absolute;
     right: 0;
-    top: 0;
+    bottom: 0;
 }
 
 .thermometer {

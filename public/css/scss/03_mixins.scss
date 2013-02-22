@@ -10,3 +10,30 @@
         list-style: none;
     }
 }
+
+$viewport-width: false !default;
+ 
+@mixin respond-min($width) {
+    @if $viewport-width {
+        @if $viewport-width >= $width {
+            @content;    
+        }
+    }
+    @else {
+        @media screen and (min-width: $width) {
+            @content;
+        }
+    }
+}
+@mixin respond-max($width) {
+    @if $viewport-width {
+        @if $viewport-width <= $width {
+            @content;    
+        }
+    }
+    @else {
+        @media screen and (max-width: $width) {
+            @content;
+        }
+    }
+}
