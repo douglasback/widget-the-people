@@ -11,6 +11,7 @@
 #widget header {
     background: rgba(177, 208, 222, 0.60);
     margin: 0 -2.50728174447%;
+    padding: 0 2.50728174447%;
     text-align: center;
     
     h1 {
@@ -21,8 +22,11 @@
 }
 
 .thermometer-wrap {
-    padding: 2em 0;
+    background: rgba(195, 219, 229,0.30);
+    margin: 0 -2.50728174447%;
+    padding: 2.5em 2.50728174447% 2.5em;
     position: relative;
+    
     
 }
 #signature-info {
@@ -37,7 +41,8 @@
 #signature-count {
     margin: 0;
     position: absolute;
-    top: 0;
+    top: 0.5em;
+    left: 2.50728174447%;
 }
 #signature-needed {
     text-align: center;
@@ -55,8 +60,8 @@
 }
 #signature-threshold {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 2.50728174447%;
+    bottom: 0.5em;
     margin: 0;
 }
 

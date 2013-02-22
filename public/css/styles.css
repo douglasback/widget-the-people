@@ -577,64 +577,68 @@ textarea {
 #widget header {
   background: rgba(177, 208, 222, 0.6);
   margin: 0 -2.50728%;
+  padding: 0 2.50728%;
   text-align: center;
 }
-/* line 16, scss/06_widget.scss */
+/* line 17, scss/06_widget.scss */
 #widget header h1 {
   margin: 0;
   padding: 0.67em 0;
 }
 
-/* line 23, scss/06_widget.scss */
+/* line 24, scss/06_widget.scss */
 .thermometer-wrap {
-  padding: 2em 0;
+  background: rgba(195, 219, 229, 0.3);
+  margin: 0 -2.50728%;
+  padding: 2.5em 2.50728% 2.5em;
   position: relative;
 }
 
-/* line 28, scss/06_widget.scss */
+/* line 32, scss/06_widget.scss */
 #signature-info {
   background: #3ba3d0;
   color: #DADADA;
   padding: 0.3em 0;
   margin: 0 -2.50728%;
 }
-/* line 33, scss/06_widget.scss */
+/* line 37, scss/06_widget.scss */
 #signature-info p {
   margin: 0;
 }
 
-/* line 37, scss/06_widget.scss */
+/* line 41, scss/06_widget.scss */
 #signature-count {
   margin: 0;
   position: absolute;
-  top: 0;
+  top: 0.5em;
+  left: 2.50728174447%;
 }
 
-/* line 42, scss/06_widget.scss */
+/* line 47, scss/06_widget.scss */
 #signature-needed {
   text-align: center;
 }
 
-/* line 45, scss/06_widget.scss */
+/* line 50, scss/06_widget.scss */
 #signature-needed-number {
   font-size: 125%;
   font-weight: bold;
 }
 
-/* line 50, scss/06_widget.scss */
+/* line 55, scss/06_widget.scss */
 #deadline {
   font-style: italic;
 }
 
-/* line 56, scss/06_widget.scss */
+/* line 61, scss/06_widget.scss */
 #signature-threshold {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 2.50728174447%;
+  bottom: 0.5em;
   margin: 0;
 }
 
-/* line 63, scss/06_widget.scss */
+/* line 68, scss/06_widget.scss */
 .thermometer {
   width: 100%;
   height: 20px;
@@ -648,17 +652,17 @@ textarea {
   overflow: hidden;
 }
 
-/* line 71, scss/06_widget.scss */
+/* line 76, scss/06_widget.scss */
 .progress {
   height: 20px;
   background: #ff960d;
 }
 
-/* line 76, scss/06_widget.scss */
+/* line 81, scss/06_widget.scss */
 .button {
   text-align: center;
 }
-/* line 78, scss/06_widget.scss */
+/* line 83, scss/06_widget.scss */
 .button a {
   color: #a65800;
   display: inline-block;
