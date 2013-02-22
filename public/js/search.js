@@ -17,7 +17,7 @@
             iframe = '<iframe src="http://localhost:5000/widget/' + result.id +'" style="width: 100%; height: 300px; border: 0;"></iframe>';
             $('#generated-widget').val(iframe);
             // test preview
-            $('#step-3').append(iframe);
+            $('#step-3-inner').html(iframe);
         });
     };
     var loadPetitions = function(){
