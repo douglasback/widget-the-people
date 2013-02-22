@@ -32,3 +32,20 @@ input {
 textarea {
     width: 100%;
 }
+
+.typeahead {
+    @include unstyled;
+    border: 1px solid shade($autocompleteHighlight, 20);
+    li {
+        line-height: 1.4;
+        padding: .2em 0;
+        &.active {
+            background: $autocompleteHighlight;
+        }
+        a {
+            
+            font-weight: normal;
+        }
+        
+    }
+}

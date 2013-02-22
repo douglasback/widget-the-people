@@ -423,6 +423,12 @@ body {
   width: 95%;
 }
 
+/* line 17, scss/04_common.scss */
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
 /* line 3, scss/05_search.scss */
 #spinner {
   background: rgba(0, 0, 0, 0.85);
@@ -467,6 +473,30 @@ input {
 /* line 32, scss/05_search.scss */
 textarea {
   width: 100%;
+}
+
+/* line 36, scss/05_search.scss */
+.typeahead {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #a1cc98;
+}
+/* line 9, scss/03_mixins.scss */
+.typeahead li {
+  list-style: none;
+}
+/* line 39, scss/05_search.scss */
+.typeahead li {
+  line-height: 1.4;
+  padding: 0.2em 0;
+}
+/* line 42, scss/05_search.scss */
+.typeahead li.active {
+  background: #caffbf;
+}
+/* line 45, scss/05_search.scss */
+.typeahead li a {
+  font-weight: normal;
 }
 
 /* line 2, scss/06_widget.scss */

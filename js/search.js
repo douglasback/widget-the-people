@@ -7,12 +7,17 @@
     var getPetitionId = function(){
         $('#form-search').on("submit", function(e){
             e.preventDefault();
-            var needle = $('#title-search').val();
+            var needle = $('#title-search').val(),
+                iframe;
             var result = _.find(petitions, function(p){
                 return p.title === needle;
             });
             console.log("petition id === " + result.id);
-            $('#generated-widget').val('<iframe src="http://wtp/?id=' + result.id +'" style="width: 100%; height: 300px; border: 0;"></iframe>');
+            //build iframe code
+            iframe = '<iframe src="http://wtp/?id=' + result.id +'" style="width: 100%; height: 300px; border: 0;"></iframe>';
+            $('#generated-widget').val(iframe);
+            // test preview
+            $('#step-3').append(iframe);
         });
     };
     var loadPetitions = function(){
@@ -21,7 +26,7 @@
        // /js/petitions.json local
        // https://petitions.whitehouse.gov/api/v1/petitions.jsonp?&key=xeUpEtux3Egbt5V&limit=1000&callback=?
        
-        $.getJSON("/js/petitions.json", function(data){
+        $.getJSON("https://petitions.whitehouse.gov/api/v1/petitions.jsonp?&key=xeUpEtux3Egbt5V&limit=1000&callback=?", function(data){
             petitions = _.map(data.results, function(p){
                 var pet = {};
                 pet.title = p.title;
@@ -29,9 +34,9 @@
                 return pet;
             });
             petitionTitles = _.pluck(petitions, "title");
-            $('#title-search').autocomplete({
+            $('#title-search').typeahead({
                 source: petitionTitles,
-                minLength: 3
+                minLength: 2
 
             });
             $('#spinner').fadeOut();

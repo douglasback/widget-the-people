@@ -15,7 +15,7 @@
     <p>Goal: {{ signatures.threshold }}</p>\
     <p>Signatures: {{ signatures.count }}</p>\
     <p>Signatures needed: {{ signatures.needed }}</p>\
-    <p><a href="{{ url }}">Sign the petition</a></p>\
+    <p><a href="{{ url }}" target="_blank">Sign the petition</a></p>\
     ');
     
     wtp.thermometer = _.template('<div class="thermometer-wrap">\

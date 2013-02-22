@@ -19,7 +19,7 @@
             <h2>Step 1: Find your petition</h2>
             <form id="form-search" method="GET">
                 <label>Enter the name of the petition you would like to promote
-                <input id="title-search" type="text" value=""></label>
+                <input id="title-search" type="text" value="" autocomplete="off"></label>
                 <button id="search">Get widget</button>
             </form>
             </section>
@@ -27,13 +27,16 @@
                 <h2>Step 2: Get the code</h2>
                 <textarea id="generated-widget"></textarea>
             </section> <!-- /#step-2.step -->
+            <section id="step-3" class="step">
+                <h2>Step 3: Preview</h2>
+            </section> <!-- /#step-2.step -->
+            
         </div>
 
         <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
         <script src="vendor/jquery-1.9.1.js"></script>
         <script src="vendor/underscore.js"></script>
-        <!-- <script src="vendor/jquery-autocomplete.min.js"></script> -->
-        <script src="vendor/jquery-ui-1.10.1.custom.js"></script>
+        <script src="vendor/bootstrap-typeahead.js"></script>
         <script src="js/search.js"></script>
     </body>
 </html>
