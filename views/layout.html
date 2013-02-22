@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Widget the People</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link href="/css/styles.css" rel="stylesheet" type="text/css">
+        <style>
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+        {{{body}}}
+        </div> <!-- /#wrapper -->
+        
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="/js/vendor/jquery-1.9.1.js"></script>
+        <script src="/js/vendor/underscore.js"></script>
+        <script src="/js/vendor/bootstrap-typeahead.js"></script>
+        {{#if pageType}}
+        <script src="/js/{{pageType}}.js"></script>
+        {{/if}}
+    </body>
+</html>

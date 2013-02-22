@@ -74,7 +74,7 @@
         return fill < 100 ? fill : 100;
     }
     
-    $.getScript(wtp.buildUrl('petitions/' + wtp.idReg.exec(document.location.search)[1], "wtp.callback"));
+    $.getScript(wtp.buildUrl('petitions/' + petitionId, "wtp.callback"));
     
     
 }(window, document));
