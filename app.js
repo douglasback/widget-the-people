@@ -33,8 +33,6 @@ require('./routes')(app);
 
 // Make server turn on and listen at defined PORT (or port 5000 if is not defined)
 var port = process.env.PORT || 5000;
-var global = {};
-global.APIKEY = "xeUpEtux3Egbt5V";
 app.listen(port, function() {
   console.log('Listening on ' + port);
 });
