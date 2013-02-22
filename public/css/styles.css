@@ -414,9 +414,10 @@ body {
   background: url(/img/ecailles.png) left top repeat;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 62.5%;
+  color: #024a68;
 }
 
-/* line 13, scss/04_common.scss */
+/* line 15, scss/04_common.scss */
 #wrapper {
   font-size: 1.2em;
   margin: 1em auto;
@@ -424,64 +425,64 @@ body {
   width: 95%;
 }
 @media screen and (min-width: 480px) {
-  /* line 13, scss/04_common.scss */
+  /* line 15, scss/04_common.scss */
   #wrapper {
     font-size: 1.4em;
   }
 }
 @media screen and (min-width: 640px) {
-  /* line 13, scss/04_common.scss */
+  /* line 15, scss/04_common.scss */
   #wrapper {
     font-size: 1.6em;
   }
 }
 
-/* line 28, scss/04_common.scss */
+/* line 30, scss/04_common.scss */
 h1 {
   font-size: 1.4em;
 }
 @media screen and (min-width: 480px) {
-  /* line 28, scss/04_common.scss */
+  /* line 30, scss/04_common.scss */
   h1 {
     font-size: 1.6em;
   }
 }
 @media screen and (min-width: 640px) {
-  /* line 28, scss/04_common.scss */
+  /* line 30, scss/04_common.scss */
   h1 {
     font-size: 2.0em;
   }
 }
 
-/* line 37, scss/04_common.scss */
+/* line 39, scss/04_common.scss */
 h2 {
   font-size: 1.4em;
 }
 @media screen and (min-width: 480px) {
-  /* line 37, scss/04_common.scss */
+  /* line 39, scss/04_common.scss */
   h2 {
     font-size: 1.6em;
   }
 }
 @media screen and (min-width: 640px) {
-  /* line 37, scss/04_common.scss */
+  /* line 39, scss/04_common.scss */
   h2 {
     font-size: 2.0em;
   }
 }
 
-/* line 46, scss/04_common.scss */
+/* line 48, scss/04_common.scss */
 p {
   font-size: 1em;
 }
 @media screen and (max-width: 480px) {
-  /* line 46, scss/04_common.scss */
+  /* line 48, scss/04_common.scss */
   p {
     font-size: 1.2em;
   }
 }
 
-/* line 52, scss/04_common.scss */
+/* line 54, scss/04_common.scss */
 a {
   color: #ff960d;
   text-decoration: none;
@@ -606,7 +607,7 @@ textarea {
 #signature-count {
   margin: 0;
   position: absolute;
-  top: 0.5em;
+  top: 0.7em;
   left: 2.50728174447%;
 }
 
@@ -635,13 +636,27 @@ textarea {
 
 /* line 65, scss/06_widget.scss */
 #signature-threshold {
+  bottom: 0.7em;
   position: absolute;
   right: 2.50728174447%;
-  bottom: 0.5em;
-  margin: 0;
 }
 
-/* line 72, scss/06_widget.scss */
+/* line 71, scss/06_widget.scss */
+.progress-labels {
+  font-size: 90%;
+  margin: 0;
+  text-transform: uppercase;
+}
+/* line 76, scss/06_widget.scss */
+.progress-labels span {
+  text-transform: none;
+  font-size: 135%;
+  font-weight: bold;
+  vertical-align: text-top;
+  line-height: 1;
+}
+
+/* line 85, scss/06_widget.scss */
 .thermometer {
   width: 100%;
   height: 20px;
@@ -655,17 +670,17 @@ textarea {
   overflow: hidden;
 }
 
-/* line 80, scss/06_widget.scss */
+/* line 93, scss/06_widget.scss */
 .progress {
   height: 20px;
   background: #ff960d;
 }
 
-/* line 85, scss/06_widget.scss */
+/* line 98, scss/06_widget.scss */
 .button {
   text-align: center;
 }
-/* line 87, scss/06_widget.scss */
+/* line 100, scss/06_widget.scss */
 .button a {
   color: #a65800;
   display: inline-block;

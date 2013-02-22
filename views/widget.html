@@ -15,11 +15,11 @@
 
 
   <div class="thermometer-wrap">
-    <p id="signature-count" style="{{ mercuryLabel }};"><span id="signature-count-number">{{ signatures.count }}</span> signatures</p>
+    <p id="signature-count" class="progress-labels" style="{{ mercuryLabel }};"><span id="signature-count-number">{{ signatures.count }}</span> signatures</p>
       <div class="thermometer">
           <div class="progress" style="width: {{ mercury }}%;"></div>
       </div>
-      <p id="signature-threshold">Goal: <span id="signature-threshold-number">{{ signatures.threshold }}</span></p>
+      <p id="signature-threshold" class="progress-labels">Goal: <span id="signature-threshold-number">{{ signatures.threshold }}</span></p>
   </div>
 
   {{#if active}}
