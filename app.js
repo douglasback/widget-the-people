@@ -8,9 +8,12 @@ var app = module.exports = express();
 app.configure(function(){
     app.set('views', __dirname + '/views');
     app.set('view engine', 'hbs');
-    // app.set('view options',{layout:true}); // use /views/layout.html to manage your main header/footer wrapping template
     app.engine('.html',require('hbs').__express); //use .html files in /views instead .hbs
     app.use(express.static(__dirname + '/public'));
+    app.use(function(req,res,next){
+        res.locals.stylesheet = req.path.match(/widget/) ? "widget" : "styles";
+        next();
+    });
 });
 
 app.configure('development', function(){
@@ -23,6 +26,7 @@ app.configure('production', function(){
     console.log("I'm a production server!");
     app.use(express.errorHandler({ dumpExceptions: true}));
 });
+
 
 // Routes
 require('./routes')(app);

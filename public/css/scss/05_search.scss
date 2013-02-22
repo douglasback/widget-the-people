@@ -6,7 +6,7 @@
   color: white;
   display: none;
   left: 50%;
-  margin: 30px 0 0 -200px;
+  margin: 30px 0 0 -150px;
   position: absolute;
   padding: 50px;
   text-align: center;
@@ -26,7 +26,7 @@ input {
 .step {
     background: #fff;
     border: 1px solid #ccc;
-    margin-top: 2em;
+    margin: 2em 0;
     padding: 0 2% 1em;
 }
 textarea {
@@ -40,10 +40,10 @@ textarea {
         line-height: 1.4;
         padding: .2em .3em;
         &.active {
-            background: $autocompleteHighlight;
+            background: lighten($orangeTint, 10);
         }
         a {
-            
+            color: $blue;
             font-weight: normal;
         }
         
