@@ -14,7 +14,7 @@
             });
             console.log("petition id === " + result.id);
             //build iframe code
-            iframe = '<iframe src="http://localhost:5000/widget/' + result.id +'" style="width: 100%; height: 300px; border: 0;"></iframe>';
+            iframe = '<iframe src="http://petition-promoter.herokuapp.com/widget/' + result.id +'" style="width: 100%; height: 300px; border: 0;"></iframe>';
             $('#generated-widget').val(iframe);
             // test preview
             $('#step-3-inner').html(iframe);
