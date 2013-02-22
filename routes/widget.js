@@ -59,6 +59,10 @@ module.exports = {
                     return fill < 100 ? fill : 100;
                 };
                 
+                tmplVars.mercuryLabel = function(){
+                    return tmplVars.mercury() > 85 ? 'right: 0%;' 
+                    : 'left: ' + tmplVars.mercury() + '%';
+                };
                 
                 
                 if (tmplVars.signatures.percentage === 100) {
