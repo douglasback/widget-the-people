@@ -85,25 +85,48 @@
 .thermometer {
     width: 100%;
     height: 20px;
-    background: lighten($blueTint, 30);
+    background: lighten($blueTint, 20);
+    background-size: 2% 5%; /* Controls the size of the stripes */
+    @include background-image(linear-gradient(left, rgba(255, 255, 255, .2) 90%, transparent 90%));
+//    @include background-image(linear-gradient(0deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+//transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+//transparent 75%, transparent));
+//@include background-image(linear-gradient(0deg,
+//transparent 10%, rgba(255, 255, 255, .2) 10%, 
+//rgba(255, 255, 255, .2) 20%, transparent 20%, 
+//transparent 30%, rgba(255, 255, 255, .2) 30%, 
+//rgba(255, 255, 255, .2) 40%, transparent 40%, 
+//transparent 50%, rgba(255, 255, 255, .2) 50%, 
+//rgba(255, 255, 255, .2) 60%, transparent 60%, 
+//transparent 70%, rgba(255, 255, 255, .2) 70%, 
+//rgba(255, 255, 255, .2) 80%, transparent 80%, 
+//transparent 90%, rgba(255, 255, 255, .2) 90%,
+//rgba(255, 255, 255, .2)));
     @include border-radius(10px);
     background-clip: content-box;
     overflow: hidden;
 }
 .progress {
     height: 20px;
-    background: $orange;
+    // Thanks Lea Verou: lea.verou.me/demos/css3-patterns.html
+    background-color: $orange;
+    background-size: 20px 20px; /* Controls the size of the stripes */
+    @include background-image(linear-gradient(135deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+transparent 75%, transparent));
 }
 
 .button {
     text-align: center;
-    a {
+} 
+button,
+.button a {
+        background: $orangeTint;
         color: $orangeDeep;
         display: inline-block;
-        background: $orangeTint;
-//        @include background-image(linear-gradient(top, lighten($blueTint,20) 0%, lighten($blueTint, 30) 50%, lighten($blueTint, 25) 51% , lighten($blueTint, 10) 100%));
+        font-weight: bold;
+        @include background-image(linear-gradient(top, lighten($orangeTint, 10) 0%, $orangeTint 100%));
         padding: .3em 1em;
         border: 1px solid shade(#f6f8f9, 20);
         @include border-radius(3px);
     }
-}

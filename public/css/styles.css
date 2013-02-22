@@ -660,7 +660,14 @@ textarea {
 .thermometer {
   width: 100%;
   height: 20px;
-  background: #c3dbe5;
+  background: #9fc5d6;
+  background-size: 2% 5%;
+  /* Controls the size of the stripes */
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(90%, rgba(255, 255, 255, 0.2)), color-stop(90%, transparent));
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.2) 90%, transparent 90%);
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.2) 90%, transparent 90%);
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0.2) 90%, transparent 90%);
+  background-image: linear-gradient(left, rgba(255, 255, 255, 0.2) 90%, transparent 90%);
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -670,21 +677,35 @@ textarea {
   overflow: hidden;
 }
 
-/* line 93, scss/06_widget.scss */
+/* line 109, scss/06_widget.scss */
 .progress {
   height: 20px;
-  background: #ff960d;
+  background-color: #ff960d;
+  background-size: 20px 20px;
+  /* Controls the size of the stripes */
+  background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
-/* line 98, scss/06_widget.scss */
+/* line 119, scss/06_widget.scss */
 .button {
   text-align: center;
 }
-/* line 100, scss/06_widget.scss */
+
+/* line 123, scss/06_widget.scss */
+button,
 .button a {
+  background: #ffbd73;
   color: #a65800;
   display: inline-block;
-  background: #ffbd73;
+  font-weight: bold;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffd5a6), color-stop(100%, #ffbd73));
+  background-image: -webkit-linear-gradient(top, #ffd5a6 0%, #ffbd73 100%);
+  background-image: -moz-linear-gradient(top, #ffd5a6 0%, #ffbd73 100%);
+  background-image: -o-linear-gradient(top, #ffd5a6 0%, #ffbd73 100%);
+  background-image: linear-gradient(top, #ffd5a6 0%, #ffbd73 100%);
   padding: 0.3em 1em;
   border: 1px solid #c4c6c7;
   -webkit-border-radius: 3px;
