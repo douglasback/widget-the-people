@@ -32,7 +32,7 @@
 #signature-info {
     background: $blueAccent;
     color: #DADADA;
-    padding: .3em 0;
+    padding: .3em 2.50728174447%;
     margin: 0 -2.50728174447%;
     p {
         margin: 0;
@@ -50,6 +50,10 @@
 #signature-needed-number {
     font-size: 125%;
     font-weight: bold;
+    display: block;
+    @include respond-min(480px){
+        display: inline;
+    }
     
 }
 #deadline {

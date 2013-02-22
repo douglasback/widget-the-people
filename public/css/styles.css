@@ -598,7 +598,7 @@ textarea {
 #signature-info {
   background: #3ba3d0;
   color: #DADADA;
-  padding: 0.3em 0;
+  padding: 0.3em 2.50728%;
   margin: 0 -2.50728%;
 }
 /* line 37, scss/06_widget.scss */
@@ -623,14 +623,21 @@ textarea {
 #signature-needed-number {
   font-size: 125%;
   font-weight: bold;
+  display: block;
+}
+@media screen and (min-width: 480px) {
+  /* line 50, scss/06_widget.scss */
+  #signature-needed-number {
+    display: inline;
+  }
 }
 
-/* line 55, scss/06_widget.scss */
+/* line 59, scss/06_widget.scss */
 #deadline {
   font-style: italic;
 }
 
-/* line 61, scss/06_widget.scss */
+/* line 65, scss/06_widget.scss */
 #signature-threshold {
   position: absolute;
   right: 2.50728174447%;
@@ -638,7 +645,7 @@ textarea {
   margin: 0;
 }
 
-/* line 68, scss/06_widget.scss */
+/* line 72, scss/06_widget.scss */
 .thermometer {
   width: 100%;
   height: 20px;
@@ -652,17 +659,17 @@ textarea {
   overflow: hidden;
 }
 
-/* line 76, scss/06_widget.scss */
+/* line 80, scss/06_widget.scss */
 .progress {
   height: 20px;
   background: #ff960d;
 }
 
-/* line 81, scss/06_widget.scss */
+/* line 85, scss/06_widget.scss */
 .button {
   text-align: center;
 }
-/* line 83, scss/06_widget.scss */
+/* line 87, scss/06_widget.scss */
 .button a {
   color: #a65800;
   display: inline-block;
