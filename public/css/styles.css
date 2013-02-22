@@ -454,8 +454,9 @@ p {
 
 /* line 37, scss/04_common.scss */
 a {
+  color: #62b343;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 /* line 3, scss/05_search.scss */
@@ -528,27 +529,26 @@ textarea {
   font-weight: normal;
 }
 
-/* line 1, scss/06_widget.scss */
+/* line 5, scss/06_widget.scss */
 .thermometer-wrap {
   padding: 2.6em 0;
   position: relative;
 }
 
-/* line 6, scss/06_widget.scss */
+/* line 10, scss/06_widget.scss */
 #signature-count {
-  left: 0;
   position: absolute;
   top: 0;
 }
 
-/* line 14, scss/06_widget.scss */
+/* line 18, scss/06_widget.scss */
 #signature-threshold {
   position: absolute;
   right: 0;
   bottom: 0;
 }
 
-/* line 20, scss/06_widget.scss */
+/* line 24, scss/06_widget.scss */
 .thermometer {
   width: 100%;
   height: 20px;
@@ -562,8 +562,17 @@ textarea {
   overflow: hidden;
 }
 
-/* line 28, scss/06_widget.scss */
+/* line 32, scss/06_widget.scss */
 .progress {
   height: 20px;
   background: red;
+}
+
+/* line 37, scss/06_widget.scss */
+#response {
+  text-align: center;
+}
+/* line 39, scss/06_widget.scss */
+#response a {
+  background-image: #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%, top;
 }

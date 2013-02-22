@@ -35,14 +35,19 @@ module.exports = {
                 // Figure out whether the petition has expired or is still active
                 
                 var now = moment().unix();
-                    momentDeadline = moment.unix(apiResponse.deadline);
-                if (now > momentDeadline){
+                    momentDeadline = moment(apiResponse.deadline);
+                if (now < momentDeadline){
+                    console.log("petition is active");
+                    console.log(now + '>' + momentDeadline);
                     tmplVars.active = true;
                 } else {
+                    console.log("petition is inactive");
+                    console.log(now + '>' + momentDeadline);
+                    
                     tmplVars.active = false;
                 }
                 
-                tmplVars.deadline = momentDeadline.format("MMMM Do, YYYY");
+                tmplVars.deadline = moment.unix(momentDeadline).format("MMMM Do, YYYY");
                 
                 var count = tmplVars.signatures.count = apiResponse["signature count"];
                 var threshold = tmplVars.signatures.threshold = apiResponse["signature threshold"];
@@ -69,6 +74,11 @@ module.exports = {
                     tmplVars.success = true;
                 } else {
                     tmplVars.success = false;
+                }
+                
+                //Has the White House responded to the petition?
+                if (apiResponse.response){
+                    tmplVars.responseUrl = apiResponse.response.url;
                 }
                 viewRes.render('widget.html', tmplVars);
               });
