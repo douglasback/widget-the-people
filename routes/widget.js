@@ -28,6 +28,7 @@ module.exports = {
                 var count = tmplVars.signatures.count = apiResponse["signature count"];
                 var threshold = tmplVars.signatures.threshold = apiResponse["signature threshold"];
                 tmplVars.signatures.needed = apiResponse["signatures needed"];
+                tmplVars.url = apiResponse.url;
                 
                 tmplVars.progress = function(){
                     var c = parseInt(count, 10),
