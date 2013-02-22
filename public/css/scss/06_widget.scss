@@ -34,9 +34,12 @@
     background: $red;
 }
 
-#response {
+.button {
     text-align: center;
     a {
-        @include background-image(color-stops(#f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%), top);
+        display: inline-block;
+        @include background-image(linear-gradient(top, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%));
+        padding: .3em 1em;
+        border: 1px solid shade(#f6f8f9, 20);
     }
 }

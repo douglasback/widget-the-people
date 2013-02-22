@@ -569,10 +569,17 @@ textarea {
 }
 
 /* line 37, scss/06_widget.scss */
-#response {
+.button {
   text-align: center;
 }
 /* line 39, scss/06_widget.scss */
-#response a {
-  background-image: #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%, top;
+.button a {
+  display: inline-block;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f6f8f9), color-stop(50%, #e5ebee), color-stop(51%, #d7dee3), color-stop(100%, #f5f7f9));
+  background-image: -webkit-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  background-image: -moz-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  background-image: -o-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  background-image: linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  padding: 0.3em 1em;
+  border: 1px solid #c4c6c7;
 }
