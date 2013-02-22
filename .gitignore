@@ -2,3 +2,4 @@
 config.txt
 userflow.txt
 .sass-cache
+node_modules
