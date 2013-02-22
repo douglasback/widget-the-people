@@ -3,7 +3,7 @@
 }
 
 body {
-    background: url(/img/ecailles.png) left top repeat;
+    background: url(/img/lightpaperfibers.png) left top repeat;
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
     font-size: 62.5%;
     color: $blueDeep;
@@ -38,11 +38,8 @@ h1 {
 }
 h2 {
     font-size: 1.4em;
-    @include respond-min(480px){
-        font-size: 1.6em;
-    }
     @include respond-min(640px){
-        font-size: 2.0em;
+        font-size: 1.6em;
     }
 }
 p {

@@ -65,7 +65,7 @@ module.exports = {
                 };
                 
                 tmplVars.mercuryLabel = function(){
-                    return tmplVars.mercury() > 85 ? 'right: 0%;' 
+                    return tmplVars.mercury() > 85 ? 'right: 2.50728174447%; left: auto;' 
                     : 'left: ' + tmplVars.mercury() + '%';
                 };
                 
