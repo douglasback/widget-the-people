@@ -12,7 +12,7 @@
             });
             console.log("petition id === " + result.id);
             //build iframe code
-            iframe = '<iframe src="http://petition-promoter.herokuapp.com/widget/' + result.id +'" style="width: 100%; height: 265px; border: 0;"></iframe>';
+            iframe = '<iframe src="//petition-promoter.herokuapp.com/widget/' + result.id +'" style="width: 100%; height: 265px; border: 0;"></iframe>';
             $('#generated-widget').val(iframe);
             // test preview
             $('#preview-inner').html(iframe);
