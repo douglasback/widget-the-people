@@ -31,9 +31,6 @@ app.configure('production', function(){
 // Routes
 require('./routes')(app);
 
-// Handlebars Template Helpers and Partials
-// require('./handlebarHelpers').configureHelpers(hbs);
-
 
 // Make server turn on and listen at defined PORT (or port 5000 if is not defined)
 var port = process.env.PORT || 5000;
