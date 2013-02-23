@@ -14,12 +14,11 @@
         </div> <!-- /#wrapper -->
         
 
-
+        {{#if pageType}}
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="/js/vendor/jquery-1.9.1.js"></script>
         <script src="/js/vendor/underscore.js"></script>
         <script src="/js/vendor/bootstrap-typeahead.js"></script>
-        {{#if pageType}}
         <script src="/js/{{pageType}}.js"></script>
         {{/if}}
     </body>
