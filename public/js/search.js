@@ -22,11 +22,8 @@
     };
     var loadPetitions = function(){
         $('#spinner').fadeIn();
-       
-       // /js/petitions.json local
-       // https://petitions.whitehouse.gov/api/v1/petitions.jsonp?&key=xeUpEtux3Egbt5V&limit=1000&callback=?
-       
-        $.getJSON("https://petitions.whitehouse.gov/api/v1/petitions.jsonp?&key=xeUpEtux3Egbt5V&limit=1000&callback=?", function(data){
+             
+        $.getJSON('https://petitions.whitehouse.gov/api/v1/petitions.jsonp?&key=' + window.wtp.APIKEY + '&limit=1000&callback=?', function(data){
             petitions = _.map(data.results, function(p){
                 var pet = {};
                 pet.title = p.title;
