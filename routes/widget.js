@@ -6,13 +6,14 @@ module.exports = {
     
     index: function(req,res){
 
-        var petitionId = req.sanitize('id').xss();
-        console.log("generating widget for " + petitionId);
-        var tmplVars = {},
-            url = 'https://petitions.whitehouse.gov/api/v1/petitions/' + petitionId + '.json?key=' + process.env.WTP_API_KEY,
+        var tmplVars = tmplVars || {};
+
+        tmplVars.petitionId = req.sanitize('id').xss(),
+        tmplVars.theme = req.query.theme ? req.sanitize('theme').xss() : undefined;
+        
+        var url = 'https://petitions.whitehouse.gov/api/v1/petitions/' + tmplVars.petitionId + '.json?key=' + process.env.WTP_API_KEY,
             viewRes = res;
             
-        tmplVars.petitionId = petitionId;
         console.log("connecting to api… " + url);
         
         // Make request to API
