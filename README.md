@@ -41,7 +41,7 @@ The iframe's `src` attribute refers to the app instance, so it must be available
 
 ## Technical details
 
-  - Languages: Node.js, HTML, JavaScript, and SCSS
+  - Languages: Node.js, HTML, JavaScript, Compass, and SCSS
   - Libraries / Frameworks: jQuery, Underscore.js, Bootstrap Typeahead.js
   - Data formats used: JSON, JSONP
 
