@@ -577,7 +577,7 @@ textarea {
   padding: 0.67em 0;
 }
 
-/* line 24, scss/06_widget.scss */
+/* line 23, scss/06_widget.scss */
 .thermometer-wrap {
   background: rgba(195, 219, 229, 0.3);
   margin: 0 -2.50728%;
@@ -585,19 +585,19 @@ textarea {
   position: relative;
 }
 
-/* line 32, scss/06_widget.scss */
+/* line 31, scss/06_widget.scss */
 #signature-info {
   background: #3ba3d0;
   color: #DADADA;
   padding: 0.3em 2.50728%;
   margin: 0 -2.50728%;
 }
-/* line 37, scss/06_widget.scss */
+/* line 36, scss/06_widget.scss */
 #signature-info p {
   margin: 0;
 }
 
-/* line 41, scss/06_widget.scss */
+/* line 40, scss/06_widget.scss */
 #signature-count {
   margin: 0;
   position: absolute;
@@ -605,43 +605,43 @@ textarea {
   left: 2.50728174447%;
 }
 
-/* line 47, scss/06_widget.scss */
+/* line 46, scss/06_widget.scss */
 #signature-needed {
   text-align: center;
 }
 
-/* line 50, scss/06_widget.scss */
+/* line 49, scss/06_widget.scss */
 #signature-needed-number {
   font-size: 125%;
   font-weight: bold;
   display: block;
 }
 @media screen and (min-width: 480px) {
-  /* line 50, scss/06_widget.scss */
+  /* line 49, scss/06_widget.scss */
   #signature-needed-number {
     display: inline;
   }
 }
 
-/* line 59, scss/06_widget.scss */
+/* line 58, scss/06_widget.scss */
 #deadline {
   font-style: italic;
 }
 
-/* line 65, scss/06_widget.scss */
+/* line 64, scss/06_widget.scss */
 #signature-threshold {
   bottom: 0.7em;
   position: absolute;
   right: 2.50728174447%;
 }
 
-/* line 71, scss/06_widget.scss */
+/* line 70, scss/06_widget.scss */
 .progress-labels {
   font-size: 90%;
   margin: 0;
   text-transform: uppercase;
 }
-/* line 76, scss/06_widget.scss */
+/* line 75, scss/06_widget.scss */
 .progress-labels span {
   text-transform: none;
   font-size: 135%;
@@ -650,7 +650,7 @@ textarea {
   line-height: 1;
 }
 
-/* line 85, scss/06_widget.scss */
+/* line 84, scss/06_widget.scss */
 .thermometer {
   width: 100%;
   height: 20px;
@@ -671,7 +671,7 @@ textarea {
   overflow: hidden;
 }
 
-/* line 109, scss/06_widget.scss */
+/* line 94, scss/06_widget.scss */
 .progress {
   height: 20px;
   background-color: #ff960d;
@@ -688,12 +688,12 @@ textarea {
   border-radius: 10px;
 }
 
-/* line 120, scss/06_widget.scss */
+/* line 105, scss/06_widget.scss */
 .button {
   text-align: center;
 }
 
-/* line 124, scss/06_widget.scss */
+/* line 109, scss/06_widget.scss */
 button,
 .button a {
   background: #ffbd73;
