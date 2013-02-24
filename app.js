@@ -1,6 +1,7 @@
 var express = require('express')
   , routes = require('./routes')
-  , hbs = require('hbs');
+  , hbs = require('hbs')
+  , validator = require('express-validator');
   
 var app = module.exports = express();
 
@@ -10,6 +11,7 @@ app.configure(function(){
     app.set('view engine', 'hbs');
     app.engine('.html',require('hbs').__express); //use .html files in /views instead .hbs
     app.use(express.static(__dirname + '/public'));
+    app.use(validator);
     app.use(function(req,res,next){
         res.locals.stylesheet = req.path.match(/widget/) ? "widget" : "styles";
         next();
