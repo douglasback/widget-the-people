@@ -7,9 +7,9 @@ module.exports = {
     index: function(req,res){
 
         console.log("generating widget for " + req.params.id);
-
+        console.dir(process.env);
         var tmplVars = {},
-            url = 'https://petitions.whitehouse.gov/api/v1/petitions/' + req.params.id + '.json?key=xeUpEtux3Egbt5V',
+            url = 'https://petitions.whitehouse.gov/api/v1/petitions/' + req.params.id + '.json?key=' + process.env.WTP_API_KEY,
             viewRes = res;
 
         tmplVars.petitionId = req.params.id;
