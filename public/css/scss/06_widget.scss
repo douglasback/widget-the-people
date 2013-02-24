@@ -41,7 +41,7 @@
     margin: 0;
     position: absolute;
     top: 0.7em;
-    left: 2.50728174447%;
+    margin-left: 2.50728174447%;
 }
 #signature-needed {
     text-align: center;
@@ -116,3 +116,10 @@ button,
         border: 1px solid shade(#f6f8f9, 20);
         @include border-radius(3px);
     }
+
+#preview-inner {
+    @include respond-min(480px){
+        width: 460px;
+        margin: 0 auto;
+    }
+}
