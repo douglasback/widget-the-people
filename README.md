@@ -28,6 +28,11 @@ A sample deployment is available at [widget-promoter.herokuapp.com][wtpapp]
 
 1) Clone this repository: `git clone git@github.com:douglasback/widget-the-people.git`
 
+2) Install the required node modules:
+  ```
+  npm install
+  ```
+
 2) Set your API key:
   
   - If running locally, create an `.env` file and set a value for `WTP_API_KEY`
