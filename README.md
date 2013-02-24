@@ -1,3 +1,4 @@
+### Latest release: [https://github.com/douglasback/widget-the-people](https://github.com/douglasback/widget-the-people)
 
 ## Contents
 
@@ -13,7 +14,7 @@
 
 ## About
 
-Widget the People is a [Node.js][node] application that enables petition creators and webmasters to embed a widget that promotes a particular petition on [We the People][wtp]
+Widget the People is a [Node.js][node] application that enables petition creators and webmasters to embed a widget that promotes a particular petition on [We the People][wtp].
 
 A sample deployment is available at [widget-promoter.herokuapp.com][wtpapp]
 
@@ -26,7 +27,22 @@ A sample deployment is available at [widget-promoter.herokuapp.com][wtpapp]
 ### Deploying the app 
 
 1) Clone this repository: `git clone git@github.com:douglasback/widget-the-people.git`
-2) To run a local instance, `cd` to the project directory and run `node app.js`
+
+2) Set your API key:
+  
+  - If running locally, create an `.env` file and set a value for `WTP_API_KEY`
+  
+  - If running on Heroku, run 
+  ```
+  heroku config:add WTP_API_KEY=[YOUR API KEY]
+  ```
+  (replace "YOUR API KEY" with your actual key, of course)
+  
+3) To run a local instance, `cd` to the project directory and run
+  ```
+  node app.js
+  ```
+  The app will be available at `http://localhost:5000/`.
 
 You can also deploy this app to a [PaaS][paas] provider like Heroku or AppFog. (The Procfile in this repository is currently designed to work with Heroku.)
 
@@ -50,7 +66,9 @@ The iframe's `src` attribute refers to the app instance, so it must be available
 
 The widget generation page bootstraps itself on load by making an API call to get the list of petitions. If the API is slow or not returning responses, the app will fail to function as expected.
 
-One advantage of using Node.js to generate the widget is to reduce the number of client-side resources required by the `<iframe>`. 
+One advantage of using Node.js to generate the widget is to reduce the number of client-side resources required by the `<iframe>`.
+  
+The app relies on an API key being set as an environment variable. If the API key is not set, the app will not function as expected. 
 
 ## Authors / Maintainers
 
