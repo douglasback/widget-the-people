@@ -14,6 +14,7 @@ app.configure(function(){
     app.use(validator);
     app.use(function(req,res,next){
         res.locals.stylesheet = req.path.match(/widget/) ? "widget" : "styles";
+        res.locals.google_analytics_id = process.env.GOOGLE_ANALYTICS_ID || undefined; 
         next();
     });
 });
