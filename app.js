@@ -1,3 +1,10 @@
+if(process.env.NODETIME_ACCOUNT_KEY) {
+  require('nodetime').profile({
+    accountKey: process.env.NODETIME_ACCOUNT_KEY,
+    appName: 'Widget the People' // optional
+  });
+}
+
 var express = require('express')
   , routes = require('./routes')
   , hbs = require('hbs')
