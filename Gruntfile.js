@@ -25,9 +25,13 @@ module.exports = function(grunt) {
       options: {
         banner: '<%= banner %>'
       },
-      dist: {
+      lib: {
         src: '<%= concat.dist.dest %>',
         dest: 'public/js/lib/<%= pkg.slug %>.min.js'
+      },
+      app: {
+        src: 'public/js/search.js',
+        dest: 'public/js/search.min.js'
       }
     },
     jshint: {

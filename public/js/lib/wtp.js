@@ -1,4 +1,4 @@
-/*! widget-the-people - v0.0.1 - 2013-02-27
+/*! widget-the-people - v0.1.0 - 2013-02-27
 * Copyright (c) 2013 Douglas Back; Licensed  */
 !function($){
 

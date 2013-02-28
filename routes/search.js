@@ -1,7 +1,14 @@
 module.exports = {
     
     index: function(req,res){
-        
-        res.render('search.html', { pageType: "search", apiKey: process.env.WTP_API_KEY });
+        var env = process.env.ENVIRONMENT === "production" ? 
+            true : false;
+            
+        res.render('search.html', { 
+            pageType: "search", 
+            apiKey: process.env.WTP_API_KEY,
+            production: env 
+            }
+        );
     }
 };
