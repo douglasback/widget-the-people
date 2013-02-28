@@ -29,8 +29,13 @@
 
         {{#if pageType}}
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        
+        {{#if dev}}
         <script src="/js/vendor/underscore.js"></script>
         <script src="/js/vendor/bootstrap-typeahead.js"></script>
+        {{/if}}
+        {{^if dev}}
+        <script src="/js/lib/script.js"></script>
         <script src="/js/{{pageType}}.js"></script>
         {{/if}}
     </body>
