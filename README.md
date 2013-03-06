@@ -16,11 +16,11 @@
 
 Widget the People is a [Node.js][node] application that enables petition creators and webmasters to embed a widget that promotes a particular petition on [We the People][wtp].
 
-A sample deployment is available at [widget-promoter.herokuapp.com][wtpapp]
+A sample deployment is available at [petition-promoter.herokuapp.com][wtpapp]
 
 [node]:http://nodejs.org
 [wtp]:https://petitions.whitehouse.gov
-[wtpapp]:https://widget-promoter.herokuapp.com
+[wtpapp]:https://petition-promoter.herokuapp.com
 
 ## Usage
 
