@@ -8,7 +8,6 @@ if(process.env.NODETIME_ACCOUNT_KEY) {
 var express = require('express')
   , routes = require('./routes')
   , hbs = require('hbs')
-  , gzippo = require('gzippo')
   , validator = require('express-validator');
   
 var app = module.exports = express();
