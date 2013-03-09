@@ -8,6 +8,7 @@ if(process.env.NODETIME_ACCOUNT_KEY) {
 var express = require('express')
   , routes = require('./routes')
   , hbs = require('hbs')
+  , gzippo = require('gzippo')
   , validator = require('express-validator');
   
 var app = module.exports = express();
@@ -19,6 +20,7 @@ app.configure(function(){
     app.engine('.html',require('hbs').__express); //use .html files in /views instead .hbs
     app.use(express.static(__dirname + '/public'));
     app.use(validator);
+    app.use(gzippo.staticGzip(__dirname + '/public'));
     app.use(function(req,res,next){
         res.locals.stylesheet = req.path.match(/widget/) ? "widget" : "styles";
         res.locals.google_analytics_id = process.env.GOOGLE_ANALYTICS_ID || undefined; 
