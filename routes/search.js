@@ -5,7 +5,8 @@ module.exports = {
             true : false;
             
         res.render('search.html', { 
-            pageType: "search", 
+            pageType: "search",
+            stylesheet: "styles",
             apiKey: process.env.WTP_API_KEY,
             production: env 
             }

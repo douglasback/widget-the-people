@@ -10,7 +10,7 @@ module.exports = {
 
         tmplVars.petitionId = req.sanitize('id').xss(),
         tmplVars.theme = req.query.theme ? req.sanitize('theme').xss() : undefined;
-        
+        tmplVars.stylesheet = "widget";
         var url = 'https://petitions.whitehouse.gov/api/v1/petitions/' + tmplVars.petitionId + '.json?key=' + process.env.WTP_API_KEY,
             viewRes = res;
             

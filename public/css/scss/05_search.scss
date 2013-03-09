@@ -1,5 +1,8 @@
-@import "compass/css3";
 
+@import "compass/css3";
+body {
+    background: url(/img/lightpaperfibers.png) left top repeat;
+}
 #spinner {
   background: $darkGreyAlpha;
   border-radius: 10px;
