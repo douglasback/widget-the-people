@@ -83,7 +83,7 @@ module.exports = function(grunt) {
     },
     watch: {
         js: {
-            files: ['public/js/*.js'],
+            files: ['public/js/*.js', '!public/js/*.min.js'],
             tasks: ['jshint:search', 'uglify']
         },
         sass: {
