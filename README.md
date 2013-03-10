@@ -39,9 +39,9 @@ A sample deployment is available at [petition-promoter.herokuapp.com][wtpapp]
   
   - If running on Heroku, run 
   ```
-  heroku config:add WTP_API_KEY=[YOUR API KEY]
+  heroku config:add WTP_API_KEY=YOUR_API_KEY
   ```
-  (replace "YOUR API KEY" with your actual key, of course)
+  (replace "YOUR_API_KEY" with your actual key, of course)
   
 3) To run a local instance, `cd` to the project directory and run
   ```
