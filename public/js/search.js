@@ -35,14 +35,18 @@
       e.preventDefault();
       var needle = $('#title-search').val(),
           host = document.location.host,
-          iframe;
-      var result = _.find(petitions, function(p){
+          iframe,
+          result,
+          theme;
+      result = _.find(petitions, function(p){
         return p.title === needle;
       });
       
+      theme = $('.theme-selector input:checked').val();
+      theme = theme ? "?theme=" + theme : '';
       //Build iframe code
       iframe = '<iframe src="//' +
-          host + '/widget/' + result.id +
+          host + '/widget/' + result.id + theme +
           '" style="width: 100%; height: 265px; border: 0;" scrolling="no"></iframe>';
       $('#generated-widget').val(iframe);
       
@@ -50,7 +54,7 @@
       $('#preview-inner').html(iframe);
     });
   };
-  
+
   loadPetitions();
   getPetitionId();
 }(jQuery));

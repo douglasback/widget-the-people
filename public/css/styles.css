@@ -142,6 +142,8 @@ body { background: url(/img/lightpaperfibers.png) left top repeat; }
 
 label, input { display: block; margin: 10px 0; }
 
+.theme-selector input { display: inline; width: auto; }
+
 input { -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; border: 1px solid #cccccc; padding: 8px; width: 100%; }
 
 .step { background: #fff; border: 1px solid #cccccc; margin: 2em 0; padding: 0 2% 1em; }

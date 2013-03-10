@@ -20,6 +20,12 @@ input {
     display: block;
     margin: 10px 0;
 }
+.theme-selector {
+    input {
+        display: inline;
+        width: auto;
+    }
+}
 input {
     @include border-radius(3px);
     border: 1px solid #ccc;
