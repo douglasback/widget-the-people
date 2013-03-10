@@ -31,7 +31,7 @@
   };
   
   var getPetitionId = function(){
-    $('#form-search').on("submit", function(e){
+    $('#search').on("click", function(e){
       e.preventDefault();
       var needle = $('#title-search').val(),
           host = document.location.host,
