@@ -37,3 +37,32 @@ $viewport-width: false !default;
         }
     }
 }
+
+@mixin theme($name, $themeBase, $themeTint, $themeAccent, $themeShade, $themeDeep){
+    #widget.#{$name}{
+        color: $themeDeep;
+        
+        header,
+        .thermometer-wrap {
+            background: $themeTint;
+        }
+        #signature-info {
+            color: $themeBase;
+            background: $themeShade;
+        }
+        
+        .thermometer {
+            background: $themeAccent;
+        }
+        .progress {
+            background-color: $themeDeep;
+        }
+        
+        button,
+        .button a {
+                background: $themeTint;
+                color: $themeDeep;
+                @include background-image(linear-gradient(top, lighten($themeTint, 10) 0%, $themeTint 100%));
+            }
+    }
+}

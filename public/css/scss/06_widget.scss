@@ -11,6 +11,7 @@ body{
 #widget {
     color: $blueDeep;
 }
+
 #widget header {
     background: rgba(177, 208, 222, 0.60);
     margin: 0 -2.50728174447%;
@@ -126,3 +127,5 @@ button,
         margin: 0 auto;
     }
 }
+
+@include theme(vine, $vine, $vineTint, $vineAccent, $vineShade, $vineDeep);

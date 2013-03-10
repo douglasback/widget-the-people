@@ -191,3 +191,10 @@ body { background: #FDFCF9; }
 button, .button a { background: #ffbd73; color: #a65800; display: inline-block; font-weight: bold; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffd5a6), color-stop(100%, #ffbd73)); background-image: -webkit-linear-gradient(top, #ffd5a6 0%, #ffbd73 100%); background-image: -moz-linear-gradient(top, #ffd5a6 0%, #ffbd73 100%); background-image: -o-linear-gradient(top, #ffd5a6 0%, #ffbd73 100%); background-image: linear-gradient(top, #ffd5a6 0%, #ffbd73 100%); padding: 0.3em 1em; border: 1px solid #c4c6c7; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
 
 @media screen and (min-width: 480px) { #preview-inner { width: 460px; margin: 0 auto; } }
+
+#widget.vine { color: #8d903c; }
+#widget.vine header, #widget.vine .thermometer-wrap { background: #d9d4c8; }
+#widget.vine #signature-info { color: #c7ed50; background: #968f75; }
+#widget.vine .thermometer { background: #c7bca9; }
+#widget.vine .progress { background-color: #8d903c; }
+#widget.vine button, #widget.vine .button a { background: #d9d4c8; color: #8d903c; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeece6), color-stop(100%, #d9d4c8)); background-image: -webkit-linear-gradient(top, #eeece6 0%, #d9d4c8 100%); background-image: -moz-linear-gradient(top, #eeece6 0%, #d9d4c8 100%); background-image: -o-linear-gradient(top, #eeece6 0%, #d9d4c8 100%); background-image: linear-gradient(top, #eeece6 0%, #d9d4c8 100%); }
