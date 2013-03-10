@@ -200,3 +200,10 @@ button, .button a { background: #ffbd73; color: #a65800; display: inline-block; 
 #widget.vine .thermometer { background: #c7bca9; }
 #widget.vine .progress { background-color: #8d903c; }
 #widget.vine button, #widget.vine .button a { background: #d9d4c8; color: #8d903c; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeece6), color-stop(100%, #d9d4c8)); background-image: -webkit-linear-gradient(top, #eeece6 0%, #d9d4c8 100%); background-image: -moz-linear-gradient(top, #eeece6 0%, #d9d4c8 100%); background-image: -o-linear-gradient(top, #eeece6 0%, #d9d4c8 100%); background-image: linear-gradient(top, #eeece6 0%, #d9d4c8 100%); }
+
+#widget.forest { color: #9cc24e; }
+#widget.forest header, #widget.forest .thermometer-wrap { background: #edecea; }
+#widget.forest #signature-info { color: #e3e18f; background: #4e7544; }
+#widget.forest .thermometer { background: #7f8a67; }
+#widget.forest .progress { background-color: #9cc24e; }
+#widget.forest button, #widget.forest .button a { background: #edecea; color: #9cc24e; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #edecea)); background-image: -webkit-linear-gradient(top, #ffffff 0%, #edecea 100%); background-image: -moz-linear-gradient(top, #ffffff 0%, #edecea 100%); background-image: -o-linear-gradient(top, #ffffff 0%, #edecea 100%); background-image: linear-gradient(top, #ffffff 0%, #edecea 100%); }
