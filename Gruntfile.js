@@ -49,7 +49,7 @@ module.exports = function(grunt) {
       gruntfile: {
         src: 'Gruntfile.js'
       },
-      all: {
+      search: {
         src: ['public/js/search.js']
       }
     },
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
         },
         widget: {
             options: {
-                style: "compressed",
+                style: "nested",
                 compass: true
             
             },
@@ -79,6 +79,16 @@ module.exports = function(grunt) {
                     dest: 'public/css/widget.css' 
                 }
             ]
+        }
+    },
+    watch: {
+        js: {
+            files: ['public/js/*.js'],
+            tasks: ['jshint:search', 'uglify']
+        },
+        sass: {
+            files: ['public/css/scss/*.scss'],
+            tasks: ['sass']
         }
     }
   });
