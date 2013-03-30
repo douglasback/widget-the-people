@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Douglas Back -- owner -- @douglas
+
+# THANKS
+
+    Everyone at the White House Office of Digital Strategy, especially Pete Welsch, Brian Hirsch, and Macon Phillips.
+
+
+# TECHNOLOGY COLOPHON
+
+    Node.js
+    HTML5, CSS3, SCSS, Compass
+    Twitter Bootstrap
+    Grunt.js
