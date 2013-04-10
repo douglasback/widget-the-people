@@ -5,7 +5,7 @@
   
   var petitions, // this will be an array containing the title and ID
       petitionTitles, // used for the typeahead/autocomplete input
-      ENDPOINT = 'https://petitions.whitehouse.gov/api/v1/petitions.jsonp';
+      ENDPOINT = 'https://api.whitehouse.gov/v1/petitions.jsonp';
   
   var loadPetitions = function(){
     $('#spinner').fadeIn();
