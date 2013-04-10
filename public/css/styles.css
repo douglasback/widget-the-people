@@ -77,7 +77,7 @@ figure { margin: 0; }
 
 /* ========================================================================== Forms ========================================================================== */
 /** Define consistent border, margin, and padding. */
-fieldset { border: 1px solid silver; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
 
 /** 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
 legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
@@ -144,15 +144,15 @@ label, input { display: block; margin: 10px 0; }
 
 .theme-selector input { display: inline; width: auto; }
 
-input { -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; border: 1px solid #cccccc; padding: 8px; width: 100%; }
+input { -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; border: 1px solid #ccc; padding: 8px; width: 100%; }
 
-.step { background: #fff; border: 1px solid #cccccc; margin: 2em 0; padding: 0 2% 1em; }
+.step { background: #fff; border: 1px solid #ccc; margin: 2em 0; padding: 0 2% 1em; }
 
 textarea { width: 100%; }
 
 .typeahead { margin: 0; padding: 0; border: 1px solid #a1cc98; }
 .typeahead li { list-style: none; }
-.typeahead li { line-height: 1.4; padding: 0.2em 0.3em; }
+.typeahead li { line-height: 1.4; padding: .2em .3em; }
 .typeahead li.active { background: #ffd5a6; }
 .typeahead li a { color: #0772a1; font-weight: normal; }
 
@@ -162,12 +162,12 @@ body { background: #FDFCF9; }
 
 #widget { color: #024a68; }
 
-#widget header { background: rgba(177, 208, 222, 0.6); margin: 0 -2.50728%; padding: 0 2.50728%; text-align: center; }
+#widget header { background: rgba(177, 208, 222, 0.6); margin: 0 -2.50728174447%; padding: 0 2.50728174447%; text-align: center; }
 #widget header h1 { margin: 0; padding: 0.67em 0; }
 
-.thermometer-wrap { background: rgba(195, 219, 229, 0.3); margin: 0 -2.50728%; padding: 2.5em 2.50728% 2.5em; position: relative; }
+.thermometer-wrap { background: rgba(195, 219, 229, 0.3); margin: 0 -2.50728174447%; padding: 2.5em 2.50728174447% 2.5em; position: relative; }
 
-#signature-info { background: #3ba3d0; color: #DADADA; padding: 0.3em 2.50728%; margin: 0 -2.50728%; }
+#signature-info { background: #3ba3d0; color: #DADADA; padding: .3em 2.50728174447%; margin: 0 -2.50728174447%; }
 #signature-info p { margin: 0; }
 
 #signature-count { margin: 0; position: absolute; top: 0.7em; margin-left: 2.50728174447%; }
@@ -190,7 +190,7 @@ body { background: #FDFCF9; }
 
 .button { text-align: center; }
 
-button, .button a { background: #ffbd73; color: #a65800; display: inline-block; font-weight: bold; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffd5a6), color-stop(100%, #ffbd73)); background-image: -webkit-linear-gradient(top, #ffd5a6 0%, #ffbd73 100%); background-image: -moz-linear-gradient(top, #ffd5a6 0%, #ffbd73 100%); background-image: -o-linear-gradient(top, #ffd5a6 0%, #ffbd73 100%); background-image: linear-gradient(top, #ffd5a6 0%, #ffbd73 100%); padding: 0.3em 1em; border: 1px solid #c4c6c7; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
+button, .button a { background: #ffbd73; color: #a65800; display: inline-block; font-weight: bold; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffd5a6), color-stop(100%, #ffbd73)); background-image: -webkit-linear-gradient(top, #ffd5a6 0%, #ffbd73 100%); background-image: -moz-linear-gradient(top, #ffd5a6 0%, #ffbd73 100%); background-image: -o-linear-gradient(top, #ffd5a6 0%, #ffbd73 100%); background-image: linear-gradient(top, #ffd5a6 0%, #ffbd73 100%); padding: .3em 1em; border: 1px solid #c4c6c7; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
 
 @media screen and (min-width: 480px) { #preview-inner { width: 460px; margin: 0 auto; } }
 
