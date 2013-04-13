@@ -56,7 +56,7 @@ module.exports = function(grunt) {
     sass: {
         search: {
             options: {
-                style: "compact",
+                style: "compressed",
                 compass: true
             
             },
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
         },
         widget: {
             options: {
-                style: "nested",
+                style: "compressed",
                 compass: true
             
             },
