@@ -50,11 +50,11 @@ module.exports = {
                 
                 tmplVars.deadline = moment.unix(momentDeadline).format("MMMM Do, YYYY");
                 
-                var count = tmplVars.signatures.count = apiResponse["signature count"];
-                var threshold = tmplVars.signatures.threshold = apiResponse["signature threshold"];
-                tmplVars.signatures.needed = apiResponse["signatures needed"];
+		var count = tmplVars.signatures.count = apiResponse.signatureCount;
+		var threshold = tmplVars.signatures.threshold = apiResponse.signatureThreshold;
+		tmplVars.signatures.needed = apiResponse.signaturesNeeded;
                 console.log("apiRepsonse.url === " + apiResponse.url);
-                tmplVars.url = apiResponse.url.replace(/api\.whitehouse\.gov/, "petitions.whitehouse.gov");
+		tmplVars.url = apiResponse.url;
                 console.log("tmplVars.url === " + tmplVars.url);
                 tmplVars.mercury = function(){
                     var c = parseInt(count, 10),
@@ -80,7 +80,7 @@ module.exports = {
                 
                 //Has the White House responded to the petition?
                 if (apiResponse.response){
-                    tmplVars.responseUrl = apiResponse.response.url.replace(/api\.whitehouse\.gov/, "petitions.whitehouse.gov");
+		    tmplVars.responseUrl = apiResponse.response.url;
                 }
                 viewRes.render('widget.html', tmplVars);
               });
