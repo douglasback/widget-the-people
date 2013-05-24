@@ -32,16 +32,6 @@ A sample deployment is available at [petition-promoter.herokuapp.com][wtpapp]
   ```
   npm install
   ```
-
-2) Set your API key:
-  
-  - If running locally, create an `.env` file and set a value for `WTP_API_KEY`
-  
-  - If running on Heroku, run 
-  ```
-  heroku config:add WTP_API_KEY=YOUR_API_KEY
-  ```
-  (replace "YOUR_API_KEY" with your actual key, of course)
   
 3) To run a local instance, `cd` to the project directory and run
   ```
@@ -73,8 +63,6 @@ The widget generation page bootstraps itself on load by making an API call to ge
 
 One advantage of using Node.js to generate the widget is to reduce the number of client-side resources required by the `<iframe>`.
   
-The app relies on an API key being set as an environment variable. If the API key is not set, the app will not function as expected. 
-
 ## Authors / Maintainers
 
 Widget the People was developed by Douglas Back.
