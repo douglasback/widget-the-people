@@ -3,15 +3,30 @@
 (function($){
   "use strict";
   
-  var petitions, // this will be an array containing the title and ID
+  var petitionData = [],
+      petitions = [], // this will be an array containing the title and ID
       petitionTitles, // used for the typeahead/autocomplete input
       ENDPOINT = 'https://api.whitehouse.gov/v1/petitions.jsonp';
   
-  var loadPetitions = function(){
-    $('#spinner').fadeIn();
+  var loadPetitions = function(offset){
+    offset = offset || 0;
+    $.getJSON(ENDPOINT + '?limit=1000&offset=' + offset + '&callback=?', function(data){
+      var resultset = data.metadata.resultset,
+          results = data.results;
 
-    $.getJSON(ENDPOINT + '?&key=' + window.wtp.APIKEY + '&limit=1000&callback=?', function(data){
-      petitions = _.map(data.results, function(p){
+      petitionData = petitionData.concat(results);
+      if (resultset.count - offset > resultset.limit){
+        loadPetitions(resultset.offset + resultset.limit + 1);
+      } else {
+        $('body').trigger('petitionsLoaded');
+      }
+
+    });
+  };
+  
+  var mapPetitions = function(){
+    
+    petitions = _.map(petitionData, function(p){
         var pet = {};
         pet.title = p.title;
         pet.id = p.id;
@@ -19,17 +34,15 @@
       });
 
       //Attach petitionTitles to autocomplete widget
-      petitionTitles = _.pluck(petitions, "title");
-      $('#title-search').typeahead({
-        source: petitionTitles,
-        minLength: 2
-
-      });
-      $('#spinner').fadeOut();
+    petitionTitles = _.pluck(petitions, "title");
+    $('#title-search').typeahead({
+      source: petitionTitles,
+      minLength: 2
 
     });
+    $('body').trigger('autocompleteLoaded');
   };
-  
+
   var getPetitionId = function(){
     $('#search').on("click", function(e){
       e.preventDefault();
@@ -54,7 +67,12 @@
       $('#preview-inner').html(iframe);
     });
   };
-
+  
+  $('#spinner').fadeIn();
   loadPetitions();
   getPetitionId();
+  $('body').on('petitionsLoaded', mapPetitions);
+  $('body').on('autocompleteLoaded', function(){
+    $('#spinner').fadeOut();
+  });
 }(jQuery));
